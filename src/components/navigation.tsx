@@ -19,7 +19,7 @@ export default function Navigation() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Link href='/review' aria-label='review form navigation button' legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Form</NavigationMenuLink>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Review</NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
             </NavigationMenuList>

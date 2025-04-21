@@ -1,14 +1,13 @@
-import { Card, CardContent } from '@/components/ui/card';
 import { ReviewFormFields } from './_components/review-form';
+import ReviewList from './_components/review-list';
 
 export default function ReviewPage() {
     return (
         <div className='flex items-center justify-center h-screen'>
-            <Card className='flex items-center justify-center'>
-                <CardContent className='pt-6'>
-                    <ReviewFormFields />
-                </CardContent>
-            </Card>
+            <div className='flex items-center justify-between gap-8'>
+                <ReviewFormFields />
+                <ReviewList />
+            </div>
         </div>
     );
 }

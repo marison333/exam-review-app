@@ -28,7 +28,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className='bg-gradient-to-bl from-indigo-500 to-violet-800 min-h-screen'>
                 <Navigation />
-                <div className='container max-w-6xl'>
+                <div className='container max-w-6xl mx-auto'>
                     <main>{children}</main>
                 </div>
             </body>

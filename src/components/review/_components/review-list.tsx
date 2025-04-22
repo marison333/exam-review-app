@@ -52,7 +52,7 @@ export default function ReviewsList() {
     ]);
 
     return (
-        <ScrollArea className='h-[40rem] w-[60rem] rounded-md border bg-white'>
+        <ScrollArea className='h-[40rem] w-[30rem] rounded-md border bg-white'>
             <div className='p-4'>
                 <h4 className='mb-4 text-sm font-medium leading-none'>Reviews</h4>
                 {reviews.map((review) => (

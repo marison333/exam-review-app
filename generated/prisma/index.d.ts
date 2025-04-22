@@ -893,21 +893,21 @@ export namespace Prisma {
     id: number | null
     username: string | null
     message: string | null
-    createdAt: Date | null
+    created_at: Date | null
   }
 
   export type ReviewMaxAggregateOutputType = {
     id: number | null
     username: string | null
     message: string | null
-    createdAt: Date | null
+    created_at: Date | null
   }
 
   export type ReviewCountAggregateOutputType = {
     id: number
     username: number
     message: number
-    createdAt: number
+    created_at: number
     _all: number
   }
 
@@ -924,21 +924,21 @@ export namespace Prisma {
     id?: true
     username?: true
     message?: true
-    createdAt?: true
+    created_at?: true
   }
 
   export type ReviewMaxAggregateInputType = {
     id?: true
     username?: true
     message?: true
-    createdAt?: true
+    created_at?: true
   }
 
   export type ReviewCountAggregateInputType = {
     id?: true
     username?: true
     message?: true
-    createdAt?: true
+    created_at?: true
     _all?: true
   }
 
@@ -1032,7 +1032,7 @@ export namespace Prisma {
     id: number
     username: string
     message: string
-    createdAt: Date
+    created_at: Date
     _count: ReviewCountAggregateOutputType | null
     _avg: ReviewAvgAggregateOutputType | null
     _sum: ReviewSumAggregateOutputType | null
@@ -1058,31 +1058,31 @@ export namespace Prisma {
     id?: boolean
     username?: boolean
     message?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }, ExtArgs["result"]["review"]>
 
   export type ReviewSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
     message?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }, ExtArgs["result"]["review"]>
 
   export type ReviewSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
     message?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }, ExtArgs["result"]["review"]>
 
   export type ReviewSelectScalar = {
     id?: boolean
     username?: boolean
     message?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }
 
-  export type ReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "message" | "createdAt", ExtArgs["result"]["review"]>
+  export type ReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "message" | "created_at", ExtArgs["result"]["review"]>
 
   export type $ReviewPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Review"
@@ -1091,7 +1091,7 @@ export namespace Prisma {
       id: number
       username: string
       message: string
-      createdAt: Date
+      created_at: Date
     }, ExtArgs["result"]["review"]>
     composites: {}
   }
@@ -1518,7 +1518,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Review", 'Int'>
     readonly username: FieldRef<"Review", 'String'>
     readonly message: FieldRef<"Review", 'String'>
-    readonly createdAt: FieldRef<"Review", 'DateTime'>
+    readonly created_at: FieldRef<"Review", 'DateTime'>
   }
     
 
@@ -1898,7 +1898,7 @@ export namespace Prisma {
     id: 'id',
     username: 'username',
     message: 'message',
-    createdAt: 'createdAt'
+    created_at: 'created_at'
   };
 
   export type ReviewScalarFieldEnum = (typeof ReviewScalarFieldEnum)[keyof typeof ReviewScalarFieldEnum]
@@ -1955,14 +1955,14 @@ export namespace Prisma {
     id?: IntFilter<"Review"> | number
     username?: StringFilter<"Review"> | string
     message?: StringFilter<"Review"> | string
-    createdAt?: DateTimeFilter<"Review"> | Date | string
+    created_at?: DateTimeFilter<"Review"> | Date | string
   }
 
   export type ReviewOrderByWithRelationInput = {
     id?: SortOrder
     username?: SortOrder
     message?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type ReviewWhereUniqueInput = Prisma.AtLeast<{
@@ -1972,14 +1972,14 @@ export namespace Prisma {
     NOT?: ReviewWhereInput | ReviewWhereInput[]
     username?: StringFilter<"Review"> | string
     message?: StringFilter<"Review"> | string
-    createdAt?: DateTimeFilter<"Review"> | Date | string
+    created_at?: DateTimeFilter<"Review"> | Date | string
   }, "id">
 
   export type ReviewOrderByWithAggregationInput = {
     id?: SortOrder
     username?: SortOrder
     message?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
     _count?: ReviewCountOrderByAggregateInput
     _avg?: ReviewAvgOrderByAggregateInput
     _max?: ReviewMaxOrderByAggregateInput
@@ -1994,53 +1994,53 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Review"> | number
     username?: StringWithAggregatesFilter<"Review"> | string
     message?: StringWithAggregatesFilter<"Review"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Review"> | Date | string
+    created_at?: DateTimeWithAggregatesFilter<"Review"> | Date | string
   }
 
   export type ReviewCreateInput = {
     username: string
     message: string
-    createdAt?: Date | string
+    created_at?: Date | string
   }
 
   export type ReviewUncheckedCreateInput = {
     id?: number
     username: string
     message: string
-    createdAt?: Date | string
+    created_at?: Date | string
   }
 
   export type ReviewUpdateInput = {
     username?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReviewUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReviewCreateManyInput = {
     id?: number
     username: string
     message: string
-    createdAt?: Date | string
+    created_at?: Date | string
   }
 
   export type ReviewUpdateManyMutationInput = {
     username?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReviewUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2083,7 +2083,7 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     message?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type ReviewAvgOrderByAggregateInput = {
@@ -2094,14 +2094,14 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     message?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type ReviewMinOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
     message?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type ReviewSumOrderByAggregateInput = {

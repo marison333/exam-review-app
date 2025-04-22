@@ -118,7 +118,7 @@ exports.Prisma.ReviewScalarFieldEnum = {
   id: 'id',
   username: 'username',
   message: 'message',
-  createdAt: 'createdAt'
+  created_at: 'created_at'
 };
 
 exports.Prisma.SortOrder = {

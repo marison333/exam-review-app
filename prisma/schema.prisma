@@ -15,5 +15,5 @@ model Review {
   id        Int      @id @default(autoincrement())
   username  String
   message   String
-  createdAt DateTime @default(now())
+  created_at DateTime @default(now())
 }

@@ -1,6 +1,5 @@
-type HomeProps = {
+export type HomeProps = {
     buttonLabel: string;
-    buttonTarget: string;
     buttonUrl: string;
     imageAlt: string;
     imageUrl: string;
@@ -9,7 +8,7 @@ type HomeProps = {
 };
 
 export async function GET() {
-    const response = await fetch('https://47c69rsiqh.execute-api.eu-central-1.amazonaws.com/marison_lambda_function')
+    const response = await fetch('https://47c69rsiqh.execute-api.eu-central-1.amazonaws.com/marison_lambda_function');
     if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);
     }
@@ -18,7 +17,6 @@ export async function GET() {
     
     const homeData: HomeProps = {
         buttonLabel: res.buttonLabel,
-        buttonTarget: res.buttonTarget,
         buttonUrl: res.buttonUrl,
         imageAlt: res.imageAlt,
         imageUrl: res.imageUrl,

@@ -1,4 +1,6 @@
-export type HomeProps = {
+import { NextResponse } from 'next/server';
+
+export type ApiResponse = {
     buttonLabel: string;
     buttonUrl: string;
     imageAlt: string;
@@ -8,26 +10,12 @@ export type HomeProps = {
 };
 
 export async function GET() {
-    const response = await fetch('https://47c69rsiqh.execute-api.eu-central-1.amazonaws.com/marison_lambda_function');
-    if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`);
+    const res = await fetch(process.env.API_URL as string);
+    if (!res.ok) {
+        throw new Error(`API request failed with status ${res.status}`);
     }
 
-    const res = await response.json();
-    
-    const homeData: HomeProps = {
-        buttonLabel: res.buttonLabel,
-        buttonUrl: res.buttonUrl,
-        imageAlt: res.imageAlt,
-        imageUrl: res.imageUrl,
-        title: res.title,
-        subTitle: res.subTitle
-    };
-
-    return new Response(JSON.stringify(homeData), {
-        status: 200,
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    });
+    const data = await res.json();
+    const response = NextResponse.json<ApiResponse>(data);
+    return response;
 }

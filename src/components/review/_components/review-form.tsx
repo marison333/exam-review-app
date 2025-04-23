@@ -73,10 +73,10 @@ export function ReviewFormFields() {
                             control={form.control}
                             name='message'
                             render={({ field }) => (
-                                <FormItem className='min-w-[300px] min-h-[100px]'>
+                                <FormItem className='w-[22rem] h-[20rem]'>
                                     <FormLabel>Message</FormLabel>
                                     <FormControl>
-                                        <Textarea placeholder='' {...field} />
+                                        <Textarea className='h-[15rem] resize-none' placeholder='' {...field} />
                                     </FormControl>
                                     <FormDescription>Write your review here</FormDescription>
                                     <FormMessage />

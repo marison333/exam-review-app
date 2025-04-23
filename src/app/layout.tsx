@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import React from 'react';
 import Navigation from '@/components/navigation';
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata: Metadata = {
     title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
                 <div className='container max-w-6xl mx-auto'>
                     <main>{children}</main>
                 </div>
+                <Toaster />
             </body>
         </html>
     );

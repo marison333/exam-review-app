@@ -50,9 +50,7 @@ export function ReviewFormFields() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>
-                    Review form
-                </CardTitle>
+                <CardTitle>Review form</CardTitle>
             </CardHeader>
             <CardContent className='pt-6'>
                 <Form {...form}>

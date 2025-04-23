@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     authors: [
         {
             name: 'Marison',
-            url: 'github.com/marison333',
+            url: 'github.com/marison333'
         }
     ],
-    creator: 'Marison',
+    creator: 'Marison'
 };
 
 export default function RootLayout({

@@ -1,17 +1,20 @@
-import { HomeProps } from './api/lambda/route';
-
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import { ApiResponse } from '@/app/api/lambda/route';
 
-export default async function Home() {
-    const response = await fetch('http://localhost:3000/api/lambda');
-    if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`);
+export default async function HomePage() {
+    const res = await fetch('http://localhost:3000/api/lambda', {
+        // Required in dev mode for internal API calls
+        cache: 'no-store'
+    });
+    if (!res.ok) {
+        throw new Error(`API request failed with status ${res.status}`);
     }
 
-    const homeData: HomeProps = await response.json();
+    const homeData: ApiResponse = await res.json();
+    console.log(homeData);
 
     return (
         <div className='flex flex-row items-center justify-between px-5 py-5'>

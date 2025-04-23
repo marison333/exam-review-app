@@ -56,19 +56,13 @@ export default function ReviewsList() {
             <div className='p-4'>
                 <h4 className='mb-4 text-sm font-medium leading-none'>Reviews</h4>
                 {reviews.map((review) => (
-                    <>
-                        <Card className="my-2" key={review.id}>
-                            <CardHeader>
-                                <CardTitle>{review.username}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                {review.message}
-                            </CardContent>
-                            <CardFooter>
-                                {review.date}
-                            </CardFooter>
-                        </Card>
-                    </>
+                    <Card className='my-2' key={review.id}>
+                        <CardHeader>
+                            <CardTitle>{review.username}</CardTitle>
+                        </CardHeader>
+                        <CardContent>{review.message}</CardContent>
+                        <CardFooter>{review.date}</CardFooter>
+                    </Card>
                 ))}
             </div>
         </ScrollArea>

@@ -21,7 +21,7 @@ const formSchema = z.object({
 type FormSchemaType = z.infer<typeof formSchema>;
 
 interface ReviewFormFieldsProps {
-    onSuccessfulSubmit?: (review: any) => void;
+    onSuccessfulSubmit?: (review) => void;
 }
 
 export function ReviewFormFields({ onSuccessfulSubmit }: ReviewFormFieldsProps) {
